@@ -1,0 +1,102 @@
+"use client";
+import { useState } from "react";
+import Image from "next/image";
+
+export default function HydrationCalculator() {
+  const [flour, setFlour] = useState(0);
+  const [water, setWater] = useState(0);
+  const [starter, setStarter] = useState(0);
+
+  const starterFlour = Math.ceil(starter * 0.5);
+  const starterWater = Math.ceil(starter * 0.5);
+
+  const totalFlour = Math.ceil(flour + starterFlour);
+  const totalWater = Math.ceil(water + starterWater);
+
+  const hydration =
+    totalFlour > 0 ? Math.ceil((totalWater / totalFlour) * 100) : 0;
+
+  const salt = Math.ceil(totalFlour * 0.02);
+
+  const clearInputs = () => {
+    setFlour(0);
+    setWater(0);
+    setStarter(0);
+  };
+
+  return (
+    <div className="flex flex-col items-center justify-center p-6">
+      <div className="grid grid-cols-2 gap-6 bg-white p-6 rounded-xl shadow-lg max-w-3xl w-full">
+        <div>
+          <h2 className="text-xl font-semibold mb-4">Ingredients</h2>
+
+          <div className="mb-4">
+            <label className="block text-gray-700">Flour (g)</label>
+            <input
+              type="number"
+              value={flour}
+              onChange={(e) => setFlour(Number(e.target.value))}
+              className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-yellow-400"
+            />
+          </div>
+
+          <div className="mb-4">
+            <label className="block text-gray-700">Water (g)</label>
+            <input
+              type="number"
+              value={water}
+              onChange={(e) => setWater(Number(e.target.value))}
+              className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-yellow-400"
+            />
+          </div>
+
+          <div className="mb-4">
+            <label className="block text-gray-700">Starter (g)</label>
+            <input
+              type="number"
+              value={starter}
+              onChange={(e) => setStarter(Number(e.target.value))}
+              className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-yellow-400"
+            />
+          </div>
+
+          <button
+            onClick={clearInputs}
+            className="w-full bg-yellow-500 text-white py-2 rounded-lg font-semibold hover:bg-yellow-600 transition"
+          >
+            Clear
+          </button>
+        </div>
+
+        <div className="flex flex-col h-full justify-between">
+          <h2 className="text-xl font-semibold mb-4">Totals</h2>
+          <div className="flex-grow">
+            <p className="text-lg">
+              <strong>Hydration:</strong>{" "}
+              <span className="text-blue-500">{hydration}%</span>
+            </p>
+            <p>
+              <strong>Flour:</strong> {totalFlour}g
+            </p>
+            <p>
+              <strong>Water:</strong> {totalWater}g
+            </p>
+            <p>
+              <strong>Starter:</strong> {starter}g
+            </p>
+            <p>
+              <strong>Salt:</strong> {salt}g
+            </p>
+          </div>
+          <Image
+            className="flex justify-end items-end"
+            src="/images/wheat.jpeg"
+            width={200}
+            height={200}
+            alt="wheat img"
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
