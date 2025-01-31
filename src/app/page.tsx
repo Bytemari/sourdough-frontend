@@ -1,5 +1,6 @@
 import HydrationCalculator from "@/components/hydration-calculator";
 import Image from "next/image";
+
 export default function Home() {
   return (
     <div>
@@ -12,7 +13,7 @@ export default function Home() {
           alt="sourdough bread image"
         />
       </div>
-      <h1 className="text-4xl font-semibold text-center">
+      <h1 className="text-4xl font-normal text-center">
         Simple Sourdough Calculator
       </h1>
       <div>
