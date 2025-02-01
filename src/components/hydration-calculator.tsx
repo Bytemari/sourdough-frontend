@@ -34,8 +34,8 @@ export default function HydrationCalculator() {
             <label className="block text-gray-700">Flour (g)</label>
             <input
               type="number"
-              value={flour}
-              onChange={(e) => setFlour(Number(e.target.value))}
+              value={flour === 0 ? "" : flour}
+              onChange={(e) => setFlour(Number(e.target.value) || 0)}
               className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-yellow-400"
             />
           </div>
@@ -44,8 +44,8 @@ export default function HydrationCalculator() {
             <label className="block text-gray-700">Water (g)</label>
             <input
               type="number"
-              value={water}
-              onChange={(e) => setWater(Number(e.target.value))}
+              value={water === 0 ? "" : water}
+              onChange={(e) => setWater(Number(e.target.value) || 0)}
               className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-yellow-400"
             />
           </div>
@@ -54,26 +54,26 @@ export default function HydrationCalculator() {
             <label className="block text-gray-700">Starter (g)</label>
             <input
               type="number"
-              value={starter}
-              onChange={(e) => setStarter(Number(e.target.value))}
+              value={starter === 0 ? "" : starter}
+              onChange={(e) => setStarter(Number(e.target.value) || 0)}
               className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-yellow-400"
             />
           </div>
 
           <button
             onClick={clearInputs}
-            className="w-full bg-yellow-500 text-white py-2 rounded-lg font-semibold hover:bg-yellow-600 transition"
+            className="w-full bg-yellow-400 text-white py-2 rounded-md font-semibold hover:bg-yellow-600 transition"
           >
             Clear
           </button>
         </div>
 
         <div className="flex flex-col h-full justify-between">
-          <h2 className="text-xl font-semibold mb-4">Totals</h2>
+          <h2 className="text-xl font-semibold mb-2">Totals</h2>
           <div className="flex-grow">
-            <p className="text-lg">
+            <p className="text-2xl mb-2">
               <strong>Hydration:</strong>{" "}
-              <span className="text-blue-500">{hydration}%</span>
+              <span className="text-blue-500 font-semibold">{hydration}%</span>
             </p>
             <p>
               <strong>Flour:</strong> {totalFlour}g
@@ -88,13 +88,14 @@ export default function HydrationCalculator() {
               <strong>Salt:</strong> {salt}g
             </p>
           </div>
-          <Image
-            className="flex justify-end items-end"
-            src="/images/wheat.jpeg"
-            width={200}
-            height={200}
-            alt="wheat img"
-          />
+          <div className="flex justify-center">
+            <Image
+              src="/images/wheat.jpeg"
+              width={200}
+              height={200}
+              alt="wheat img"
+            />
+          </div>
         </div>
       </div>
     </div>
