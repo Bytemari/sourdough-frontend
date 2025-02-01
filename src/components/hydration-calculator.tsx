@@ -62,7 +62,7 @@ export default function HydrationCalculator() {
 
           <button
             onClick={clearInputs}
-            className="w-full bg-yellow-400 text-white py-2 rounded-md font-semibold hover:bg-yellow-600 transition"
+            className="w-full bg-amber-300 text-black py-2 rounded-md font-semibold hover:bg-yellow-600 transition"
           >
             Clear
           </button>

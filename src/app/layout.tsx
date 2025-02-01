@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Quicksand } from "next/font/google";
 import "./globals.css";
+import { Footer } from "@/components/footer";
+import Header from "@/components/header";
 
 const dosis = Quicksand();
 
@@ -17,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`bg-gray-100 ${dosis.className} antialiased `}>
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
