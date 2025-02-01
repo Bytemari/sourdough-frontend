@@ -8,8 +8,7 @@ export default function Header() {
   const menuItems = [
     { name: "Calculator", path: "/" },
     { name: "Starter", path: "/starter" },
-    { name: "Recipe", path: "/recipe" },
-    { name: "FAQ", path: "/faq" },
+    { name: "About Hydration", path: "/hydration" },
   ];
 
   return (
