@@ -92,7 +92,7 @@ export default function HydrationCalculator() {
             <Image
               src="/images/wheat.jpeg"
               width={200}
-              height={200}
+              height={150}
               alt="wheat img"
             />
           </div>

@@ -9,7 +9,7 @@ export default function Home() {
           className="mx-auto"
           src="/images/sourdough-img3.webp"
           width={200}
-          height={200}
+          height={144}
           alt="sourdough bread image"
         />
       </div>
