@@ -4,7 +4,7 @@ import "./globals.css";
 import { Footer } from "@/components/footer";
 import Header from "@/components/header";
 
-const dosis = Quicksand();
+const dosis = Quicksand({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Sourdough Calculator",
