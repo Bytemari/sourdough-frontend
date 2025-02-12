@@ -1,11 +1,29 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function HydrationCalculator() {
   const [flour, setFlour] = useState(0);
   const [water, setWater] = useState(0);
   const [starter, setStarter] = useState(0);
+
+  // ✅ Load saved values from localStorage on mount & navigation
+  useEffect(() => {
+    const savedFlour = localStorage.getItem("flour");
+    const savedWater = localStorage.getItem("water");
+    const savedStarter = localStorage.getItem("starter");
+
+    if (savedFlour) setFlour(Number(savedFlour));
+    if (savedWater) setWater(Number(savedWater));
+    if (savedStarter) setStarter(Number(savedStarter));
+  }, []); // Run only on mount
+
+  // ✅ Save values to localStorage whenever they change
+  useEffect(() => {
+    localStorage.setItem("flour", flour.toString());
+    localStorage.setItem("water", water.toString());
+    localStorage.setItem("starter", starter.toString());
+  }, [flour, water, starter]);
 
   const starterFlour = Math.ceil(starter * 0.5);
   const starterWater = Math.ceil(starter * 0.5);
@@ -22,6 +40,9 @@ export default function HydrationCalculator() {
     setFlour(0);
     setWater(0);
     setStarter(0);
+    localStorage.removeItem("flour");
+    localStorage.removeItem("water");
+    localStorage.removeItem("starter");
   };
 
   return (

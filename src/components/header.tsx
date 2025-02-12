@@ -6,7 +6,9 @@ export default function Header() {
   const pathname = usePathname();
 
   const menuItems = [
-    { name: "Calculator", path: "/" },
+    { name: "Home", path: "/" },
+    { name: "Calculator", path: "/calculator" },
+    { name: "Recipes", path: "/recipes" },
     { name: "Starter", path: "/starter" },
     { name: "About Hydration", path: "/hydration" },
   ];
