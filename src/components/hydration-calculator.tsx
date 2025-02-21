@@ -7,7 +7,6 @@ export default function HydrationCalculator() {
   const [water, setWater] = useState(0);
   const [starter, setStarter] = useState(0);
 
-  // ✅ Load saved values from localStorage on mount & navigation
   useEffect(() => {
     const savedFlour = localStorage.getItem("flour");
     const savedWater = localStorage.getItem("water");
@@ -16,9 +15,8 @@ export default function HydrationCalculator() {
     if (savedFlour) setFlour(Number(savedFlour));
     if (savedWater) setWater(Number(savedWater));
     if (savedStarter) setStarter(Number(savedStarter));
-  }, []); // Run only on mount
+  }, []);
 
-  // ✅ Save values to localStorage whenever they change
   useEffect(() => {
     localStorage.setItem("flour", flour.toString());
     localStorage.setItem("water", water.toString());

@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`bg-gray-100 ${dosis.className} antialiased `}>
+      <body className={`bg-gray-50 ${dosis.className} antialiased `}>
         <Header />
         {children}
         <Footer />
