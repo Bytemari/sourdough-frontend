@@ -1,13 +1,20 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen px-6 py-12 text-center">
-      <h1 className="text-4xl font-bold text-yellow-600 mb-4">
+    <div className="flex flex-col items-center justify-center mt-16 px-6 py-2 text-center">
+      <h1 className="text-4xl font-bold text-yellow-600">
         Welcome to Everything Sourdough!
       </h1>
-
+      <Image
+        className="mx-3"
+        src={"/images/sourdough.png"}
+        alt={"bread img"}
+        width={120}
+        height={120}
+      />
       <p className="max-w-2xl text-lg text-gray-700 leading-relaxed">
         Have you ever wanted to bake your own{" "}
         <strong className="text-red-400">sourdough bread </strong>
@@ -36,7 +43,7 @@ export default function Home() {
         got you covered. Start your sourdough journey today!
       </p>
 
-      <div className="flex flex-wrap justify-center gap-4 mt-8">
+      <div className="flex flex-wrap justify-center gap-4 mt-10 mb-20">
         <Link href="/recipes">
           <button className="px-6 py-3 bg-yellow-500 text-white font-semibold rounded-lg shadow-md hover:bg-yellow-600 transition">
             Explore Sourdough Recipes
@@ -49,7 +56,7 @@ export default function Home() {
           </button>
         </Link>
 
-        <Link href="/hydration">
+        <Link href="/calculator">
           <button className="px-6 py-3 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-600 transition">
             Use the Hydration Calculator
           </button>

@@ -1,3 +1,4 @@
+import AboutHydration from "@/components/hydration";
 import HydrationCalculator from "@/components/hydration-calculator";
 import Image from "next/image";
 
@@ -20,6 +21,7 @@ export default function Calculator() {
         <p className="text-center mt-2">No more mental math in the kitchen!</p>
       </div>
       <HydrationCalculator />
+      <AboutHydration />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-export default function Starter() {
+export default function AboutHydration() {
   return (
     <div className="flex flex-col items-center justify-center p-6">
       <h1 className="text-4xl font-normal text-center my-14">

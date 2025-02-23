@@ -10,7 +10,6 @@ export default function Header() {
     { name: "Calculator", path: "/calculator" },
     { name: "Recipes", path: "/recipes" },
     { name: "Starter", path: "/starter" },
-    { name: "About Hydration", path: "/hydration" },
   ];
 
   return (
