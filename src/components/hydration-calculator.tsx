@@ -44,7 +44,7 @@ export default function HydrationCalculator() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-6">
+    <div className="flex flex-col items-center justify-center p-3">
       <div className="grid grid-cols-2 gap-6 bg-white p-6 rounded-xl shadow-lg max-w-3xl w-full">
         <div>
           <h2 className="text-xl font-semibold mb-4">Ingredients</h2>

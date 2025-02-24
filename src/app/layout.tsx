@@ -7,7 +7,7 @@ import Header from "@/components/header";
 const dosis = Quicksand({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Sourdough Calculator",
+  title: "Everything Sourdough",
   description: "Simple Sourdough Calculator using NextJS",
 };
 

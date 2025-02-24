@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center mt-16 px-6 py-2 text-center">
+    <div className="flex flex-col items-center justify-center mt-10 px-6 py-2 text-center">
       <h1 className="text-4xl font-bold text-yellow-600">
         Welcome to Everything Sourdough!
       </h1>

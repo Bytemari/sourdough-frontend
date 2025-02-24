@@ -1,7 +1,7 @@
 export default function Starter() {
   return (
     <div className="flex flex-col items-center justify-center p-6">
-      <h1 className="text-4xl font-normal text-center my-14">
+      <h1 className="text-4xl font-bold text-yellow-600 text-center my-10">
         Simple Sourdough Starter Recipe
       </h1>
       <div className="grid bg-white p-6 rounded-xl shadow-lg max-w-3xl w-full">

@@ -1,11 +1,10 @@
 export default function AboutHydration() {
   return (
     <div className="flex flex-col items-center justify-center p-6">
-      <h1 className="text-4xl font-normal text-center my-14">
-        About Hydration
+      <h1 className="text-4xl font-bold text-blue-400 text-center mt-16 mb-8">
+        What Is Hydration?
       </h1>
       <div className="grid bg-white p-6 rounded-xl shadow-lg max-w-3xl w-full">
-        <h3 className="text-lg font-semibold my-2">What is Hydration?</h3>
         <p>
           The hydration determines the texture, crust, flavour and appearance of
           your bread.
