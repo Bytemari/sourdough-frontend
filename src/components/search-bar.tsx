@@ -1,7 +1,7 @@
 export default function SearchBar() {
   return (
     <div className="flex justify-end my-6 mr-8">
-      <div className="relative w-full max-w-md">
+      <div className="relative w-full max-w-lg">
         <input
           type="text"
           placeholder="Search recipes..."

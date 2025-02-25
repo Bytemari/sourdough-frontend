@@ -8,7 +8,7 @@ const dosis = Quicksand({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Everything Sourdough",
-  description: "Simple Sourdough Calculator using NextJS",
+  description: "Simple Sourdough website using NextJS",
 };
 
 export default function RootLayout({
