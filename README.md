@@ -1,7 +1,10 @@
-✨ A simple app designed to calculate sourdough hydration ratios with ease.
+✨ Your ultimate resource for sourdough recipes, a hydration calculator, guides on making a sourdough starter, and so much more!
 
-🚀 Live Demo:
-Check it out on Vercel - https://simple-sourdough-calculator.vercel.app
+🛠️ Currently under development
+
+Sourdough Admin Frontend: https://github.com/Bytemari/sourdough-admin
+
+Sourdough Backend: https://github.com/Bytemari/sourdough-backend
 
 ## Getting Started
 
