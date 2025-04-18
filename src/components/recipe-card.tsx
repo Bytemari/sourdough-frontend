@@ -12,7 +12,7 @@ export default function RecipeCard() {
     },
     {
       id: "pancakes",
-      title: "Sourdough Pancakes (Popular Recipe)",
+      title: "Sourdough Pancakes",
       image: "/images/pancakes.jpg",
     },
     {
@@ -22,7 +22,7 @@ export default function RecipeCard() {
     },
     {
       id: "jalapeno-cheddar",
-      title: "Jalapeno Cheddar Sourdough Bread",
+      title: "Jalapeno Cheddar Bread",
       image: "/images/jalapeno-cheddar.jpg",
     },
     {
@@ -47,7 +47,7 @@ export default function RecipeCard() {
     },
     {
       id: "cinnamon-toast-discard",
-      title: "Cinnamon Toast Crunch (With starter discard)",
+      title: "Cinnamon Toast Crunch",
       image: "/images/cinnamon-toast.jpg",
     },
   ];
